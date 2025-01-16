@@ -1,7 +1,5 @@
 name: Build
-on:
-  push:
-    branches: [master]
+on: push
 jobs:
   docker:
     runs-on: self-hosted
