@@ -4,7 +4,8 @@ RUN apk add git --no-cache
 WORKDIR "/src"
 
 COPY . /src
-RUN yarn install --ignore-engines
+RUN yarn install && \
+	yarn cache clean
 RUN	yarn gulp build
 
 FROM scratch AS export
