@@ -14,7 +14,6 @@ COPY --from=build /src/index.html .
 COPY --from=build /src/build ./build
 
 
-
 FROM nginx:stable-alpine
 WORKDIR /usr/share/nginx/html/
 COPY . .
